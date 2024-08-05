@@ -13,9 +13,6 @@ dependencies:
 flutter:
   plugin:
     platforms:
-      android:
-        package: com.transistorsoft.flutter.backgroundfetch
-        pluginClass: BackgroundFetchPlugin
       ios:
         pluginClass: BackgroundFetchPlugin
 
