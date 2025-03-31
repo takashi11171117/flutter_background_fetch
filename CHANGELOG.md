@@ -1,6 +1,14 @@
 # CHANGELOG
 
-## Unreleased
+## 1.3.8 &mdash; 2025-03-20
+* [Android] Update gradle config.  Default compileSdkVersion 34
+
+## 1.3.7 &mdash; 2024-09-09
+* [Android] Removed unused `import` related to Flutter V1 embedding.
+
+## 1.3.6 &mdash; 2024-09-06
+* [Android] Remove unrequired dependency `appcompat`.
+* [Android] Bump default `androidx.lifecycle:lifecycle-runtime` version to `2.7.0`.
 * [Android] Add `@NonNull` annotations to flutter plugin methods.
 * [Android] Enable `multidex` in Android /example.
 
