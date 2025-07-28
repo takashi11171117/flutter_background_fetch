@@ -1,4 +1,5 @@
-#import "BackgroundFetchPlugin.h"
+#import "./include/background_fetch/BackgroundFetchPlugin.h"
+
 @import TSBackgroundFetch;
 
 static NSString *const PLUGIN_PATH = @"com.transistorsoft/flutter_background_fetch";
