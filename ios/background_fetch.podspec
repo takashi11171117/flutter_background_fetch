@@ -14,11 +14,11 @@ Pod::Spec.new do |s|
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Transistor Software' => 'info@transistorsoft.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'background_fetch/Sources/background_fetch/**/*.{h,m}'
+  s.public_header_files = 'background_fetch/Sources/include/**/*.h'
   s.dependency 'Flutter'
-  s.vendored_frameworks = ['TSBackgroundFetch.xcframework']
-  s.resource_bundles = {'TSBackgroundFetch' => ['Resources/PrivacyInfo.xcprivacy']}
+  s.vendored_frameworks = ['background_fetch/Frameworks/TSBackgroundFetch.xcframework']
+  s.resource_bundles = {'TSBackgroundFetch' => ['background_fetch/Sources/background_fetch/PrivacyInfo.xcprivacy']}
   s.ios.deployment_target = '8.0'
 end
 

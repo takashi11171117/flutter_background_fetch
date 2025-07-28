@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.0 &mdash; 2025-07-28
+* [iOS] Add Swift Package Manager support
+
 ## 1.3.8 &mdash; 2025-03-20
 * [Android] Update gradle config.  Default compileSdkVersion 34
 
