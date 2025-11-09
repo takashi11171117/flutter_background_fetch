@@ -1,5 +1,29 @@
 # iOS Setup
 
+## Cocoapods
+
+If you're not using *Swift Package Manager*, you **must** adjust the `use_frameworks!` declaration to add the following property in your `ios/Podfile`:
+
+`use_frameworks!` should already exist &mdash; just append `:linkage => :static`:
+
+```ruby
+target 'Runner' do
+  use_frameworks! :linkage => :static   # <-- append :linkage => :static
+  .
+  .
+  .
+end
+```
+
+:warning: If you *don't* add the above line, you're going to get the following error when running `flutter build ios`
+
+```console
+-> Installing background_fetch (1.5.0)
+      - Running pre install hooks
+    [!] The 'Pods-Runner' target has transitive dependencies that include statically linked binaries:
+    (/Users/chris/workspace/background-geolocation/flutter/tmp/fetch_foo/ios/Pods/TSBackgroundFetch/TSBackgroundFetch.xcframework)
+```
+
 ## Configure Background Capabilities
 
 - Select the root of your project.  Select **Capabilities** tab.  Enable **Background Modes** and enable the following mode:
@@ -28,9 +52,13 @@ BackgroundFetch.scheduleTask(TaskConfig(
   taskId: 'com.transistorsoft.customtask',
   delay: 60 * 60 * 1000  //  In one hour (milliseconds) 
 ));
+
 ```
 
+<!--
 ## Privacy Manifest
+
+
 
 Apple now requires apps provide a [Privacy Manifest for "sensitive" APIs](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api?language=objc) which could be abused for "fingerprinting" a user for malicious marketing activity.
 
@@ -63,7 +91,6 @@ It's best to edit this file's XML manually.
 <dict>
     <key>NSPrivacyAccessedAPITypes</key>
     <array>
-        <!-- [1] background_fetch: UserDefaults -->
         <dict>
             <key>NSPrivacyAccessedAPIType</key>
             <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
@@ -78,3 +105,4 @@ It's best to edit this file's XML manually.
 </plist>
 ```
 
+-->

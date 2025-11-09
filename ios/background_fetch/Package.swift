@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let package = Package(
+let package = Package(    
     name: "background_fetch",
     platforms: [
         .iOS("12.0")
@@ -13,22 +13,19 @@ let package = Package(
             name: "background-fetch",
             targets: ["background_fetch"]
         )
+    ],    
+    dependencies: [
+        .package(url: "https://github.com/transistorsoft/transistor-background-fetch.git", from: "4.0.3")
     ],
-    dependencies: [],
     targets: [
         .target(
             name: "background_fetch",
-            dependencies: ["TSBackgroundFetch"],
-            resources: [
-                .process("PrivacyInfo.xcprivacy"),
+            dependencies: [
+                .product(name: "TSBackgroundFetch", package: "transistor-background-fetch")
             ],
             cSettings: [
                 .headerSearchPath("include/background_fetch")
             ]
-        ),
-        .binaryTarget(
-            name: "TSBackgroundFetch",
-            path: "Frameworks/TSBackgroundFetch.xcframework"
-        )
+        )        
     ]
 )
