@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.5.0 &mdash; 2025-11-09
+* Both the plugin's iOS and Android core libs (`TSBackgroundFetch.xcframework`, `tsbackgroundfetch.aar`) are now published to Cocoapods, Swift Package Manager and Sonatype for android.  This is especially wonderful for android, as now there's no more need of the custom `maven url` in the root `build.gradle`.
+* See the Setup Guides for both iOS and Android (they have changed from previous versions).
+
+## 1.4.0 &mdash; 2025-07-28
+* [iOS] Add Swift Package Manager support
+
 ## 1.3.8 &mdash; 2025-03-20
 * [Android] Update gradle config.  Default compileSdkVersion 34
 

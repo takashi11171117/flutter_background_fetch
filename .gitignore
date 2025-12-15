@@ -12,3 +12,5 @@ ios/.generated
 pubspec.lock
 doc/
 build/
+ios/background_fetch/Package.resolved
+

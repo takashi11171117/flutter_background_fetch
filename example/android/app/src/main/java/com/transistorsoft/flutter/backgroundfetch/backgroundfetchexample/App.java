@@ -1,8 +1,6 @@
 package com.transistorsoft.flutter.backgroundfetch.backgroundfetchexample;
 
-import io.flutter.app.FlutterApplication;
-
-public class Application  extends FlutterApplication {
+public class App extends android.app.Application {
     @Override
     public void onCreate() {
 

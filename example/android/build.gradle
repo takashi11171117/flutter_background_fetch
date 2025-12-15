@@ -1,16 +1,16 @@
 ext {
-    compileSdkVersion   = 35
-    targetSdkVersion    = 35
+    compileSdkVersion   = 36
+    targetSdkVersion    = 36
+    backgroundFetchVersion = '4.0.0'
 }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            // [required] background_fetch
-            url "${project(':background_fetch').projectDir}/libs"
-        }
+
+        // Sonatype maven repo for installing tsbackgroundfetch SNAPSHOTs
+        //maven { url "https://central.sonatype.com/repository/maven-snapshots/" }
     }
 }
 

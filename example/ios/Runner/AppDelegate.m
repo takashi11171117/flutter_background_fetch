@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
+#include <TSBackgroundFetch/TSBackgroundFetch.h>
 
 @implementation AppDelegate
 
